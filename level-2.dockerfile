@@ -1,0 +1,6 @@
+FROM level-1
+ENV LICENSE=accept
+COPY AddressLookupproject.bar /home/aceuser/ace-server/
+COPY *.sh /home/aceuser/scripts/
+RUN . /opt/ibm/ace-12/server/bin/mqsiprofile && mqsibar -a /home/aceuser/ace-server/AddressLookupproject.bar -c -w /home/aceuser/ace-server
+
